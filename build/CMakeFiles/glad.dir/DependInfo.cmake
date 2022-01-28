@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/shirdi/spring22/cg/assign1/libraries/glad/src/glad.c" "/home/shirdi/spring22/cg/assign1/build/CMakeFiles/glad.dir/libraries/glad/src/glad.c.o"
+  "/home/shirdi/spring22/cg/assign2/libraries/glad/src/glad.c" "/home/shirdi/spring22/cg/assign2/build/CMakeFiles/glad.dir/libraries/glad/src/glad.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

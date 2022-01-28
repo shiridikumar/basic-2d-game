@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/app.dir/src/main.cpp.o  -o app  libraries/glfw/src/libglfw3.a libglad.a -ldl -lGL -lGLEW -lGLU -lGL -lpthread -lrt -lm -ldl -lGLEW -lGLU 
+/usr/bin/c++    -rdynamic CMakeFiles/app.dir/src/game.cpp.o CMakeFiles/app.dir/src/main.cpp.o CMakeFiles/app.dir/src/resource_manager.cpp.o CMakeFiles/app.dir/src/shader.cpp.o CMakeFiles/app.dir/src/sprite_renderer.cpp.o CMakeFiles/app.dir/src/texture.cpp.o  -o app  libraries/glfw/src/libglfw3.a libglad.a -ldl -lGL -lGLEW -lGLU -lGL -lpthread -lrt -lm -ldl -lGLEW -lGLU 

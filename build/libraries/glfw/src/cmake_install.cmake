@@ -1,4 +1,4 @@
-# Install script for directory: /home/shirdi/spring22/cg/assign1/libraries/glfw/src
+# Install script for directory: /home/shirdi/spring22/cg/assign2/libraries/glfw/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

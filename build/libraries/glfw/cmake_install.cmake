@@ -1,4 +1,4 @@
-# Install script for directory: /home/shirdi/spring22/cg/assign1/libraries/glfw
+# Install script for directory: /home/shirdi/spring22/cg/assign2/libraries/glfw
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/shirdi/spring22/cg/assign1/build/libraries/glfw/src/cmake_install.cmake")
+  include("/home/shirdi/spring22/cg/assign2/build/libraries/glfw/src/cmake_install.cmake")
 endif()
 

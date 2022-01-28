@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++11
 
 CXX_DEFINES = -DGLFW_INCLUDE_NONE
 
-CXX_INCLUDES = -I/home/shirdi/spring22/cg/assign1/include -I/home/shirdi/spring22/cg/assign1/libraries/glfw/include -I/home/shirdi/spring22/cg/assign1/libraries/glad/include -I/home/shirdi/spring22/cg/assign1/libraries/glm 
+CXX_INCLUDES = -I/home/shirdi/spring22/cg/assign2/include -I/home/shirdi/spring22/cg/assign2/libraries/glfw/include -I/home/shirdi/spring22/cg/assign2/libraries/glad/include -I/home/shirdi/spring22/cg/assign2/libraries/glm 
 

@@ -6,5 +6,5 @@ C_FLAGS =
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/shirdi/spring22/cg/assign1/libraries/glad/include 
+C_INCLUDES = -I/home/shirdi/spring22/cg/assign2/libraries/glad/include 
 

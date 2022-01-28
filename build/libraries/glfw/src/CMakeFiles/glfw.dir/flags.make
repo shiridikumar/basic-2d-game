@@ -6,7 +6,7 @@ C_FLAGS = -fPIC   -Wall -std=c99
 
 C_DEFINES = -D_GLFW_USE_CONFIG_H
 
-C_INCLUDES = -I/home/shirdi/spring22/cg/assign1/libraries/glfw/include -I/home/shirdi/spring22/cg/assign1/libraries/glfw/src -I/home/shirdi/spring22/cg/assign1/build/libraries/glfw/src 
+C_INCLUDES = -I/home/shirdi/spring22/cg/assign2/libraries/glfw/include -I/home/shirdi/spring22/cg/assign2/libraries/glfw/src -I/home/shirdi/spring22/cg/assign2/build/libraries/glfw/src 
 
 # Custom flags: libraries/glfw/src/CMakeFiles/glfw.dir/context.c.o_FLAGS = -Wdeclaration-after-statement
 

@@ -4,7 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/shirdi/spring22/cg/assign1/src/main.cpp" "/home/shirdi/spring22/cg/assign1/build/CMakeFiles/app.dir/src/main.cpp.o"
+  "/home/shirdi/spring22/cg/assign2/src/game.cpp" "/home/shirdi/spring22/cg/assign2/build/CMakeFiles/app.dir/src/game.cpp.o"
+  "/home/shirdi/spring22/cg/assign2/src/main.cpp" "/home/shirdi/spring22/cg/assign2/build/CMakeFiles/app.dir/src/main.cpp.o"
+  "/home/shirdi/spring22/cg/assign2/src/resource_manager.cpp" "/home/shirdi/spring22/cg/assign2/build/CMakeFiles/app.dir/src/resource_manager.cpp.o"
+  "/home/shirdi/spring22/cg/assign2/src/shader.cpp" "/home/shirdi/spring22/cg/assign2/build/CMakeFiles/app.dir/src/shader.cpp.o"
+  "/home/shirdi/spring22/cg/assign2/src/sprite_renderer.cpp" "/home/shirdi/spring22/cg/assign2/build/CMakeFiles/app.dir/src/sprite_renderer.cpp.o"
+  "/home/shirdi/spring22/cg/assign2/src/texture.cpp" "/home/shirdi/spring22/cg/assign2/build/CMakeFiles/app.dir/src/texture.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -23,8 +28,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/shirdi/spring22/cg/assign1/build/libraries/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
-  "/home/shirdi/spring22/cg/assign1/build/CMakeFiles/glad.dir/DependInfo.cmake"
+  "/home/shirdi/spring22/cg/assign2/build/libraries/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "/home/shirdi/spring22/cg/assign2/build/CMakeFiles/glad.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
