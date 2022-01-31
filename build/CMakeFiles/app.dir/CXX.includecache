@@ -885,12 +885,40 @@ resource_manager.h
 /home/shirdi/spring22/cg/assign2/src/resource_manager.h
 sprite_renderer.h
 /home/shirdi/spring22/cg/assign2/src/sprite_renderer.h
+game_object.h
+/home/shirdi/spring22/cg/assign2/src/game_object.h
 
 /home/shirdi/spring22/cg/assign2/src/game.h
 glad/glad.h
 -
 GLFW/glfw3.h
 -
+game_level.h
+/home/shirdi/spring22/cg/assign2/src/game_level.h
+
+/home/shirdi/spring22/cg/assign2/src/game_level.h
+vector
+-
+glad/glad.h
+-
+glm/glm.hpp
+-
+game_object.h
+/home/shirdi/spring22/cg/assign2/src/game_object.h
+sprite_renderer.h
+/home/shirdi/spring22/cg/assign2/src/sprite_renderer.h
+resource_manager.h
+/home/shirdi/spring22/cg/assign2/src/resource_manager.h
+
+/home/shirdi/spring22/cg/assign2/src/game_object.h
+glad/glad.h
+-
+glm/glm.hpp
+-
+texture.h
+/home/shirdi/spring22/cg/assign2/src/texture.h
+sprite_renderer.h
+/home/shirdi/spring22/cg/assign2/src/sprite_renderer.h
 
 /home/shirdi/spring22/cg/assign2/src/resource_manager.h
 map
@@ -913,10 +941,6 @@ glm/glm.hpp
 -
 glm/gtc/type_ptr.hpp
 -
-
-/home/shirdi/spring22/cg/assign2/src/sprite_renderer.cpp
-sprite_renderer.h
-/home/shirdi/spring22/cg/assign2/src/sprite_renderer.h
 
 /home/shirdi/spring22/cg/assign2/src/sprite_renderer.h
 glad/glad.h

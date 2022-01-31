@@ -70,9 +70,35 @@ CMakeFiles/app.dir/src/game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/game.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shirdi/spring22/cg/assign2/src/game.cpp -o CMakeFiles/app.dir/src/game.cpp.s
 
+CMakeFiles/app.dir/src/game_level.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/game_level.cpp.o: ../src/game_level.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shirdi/spring22/cg/assign2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/app.dir/src/game_level.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/app.dir/src/game_level.cpp.o -c /home/shirdi/spring22/cg/assign2/src/game_level.cpp
+
+CMakeFiles/app.dir/src/game_level.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/game_level.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shirdi/spring22/cg/assign2/src/game_level.cpp > CMakeFiles/app.dir/src/game_level.cpp.i
+
+CMakeFiles/app.dir/src/game_level.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/game_level.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shirdi/spring22/cg/assign2/src/game_level.cpp -o CMakeFiles/app.dir/src/game_level.cpp.s
+
+CMakeFiles/app.dir/src/game_object.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/game_object.cpp.o: ../src/game_object.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shirdi/spring22/cg/assign2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/app.dir/src/game_object.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/app.dir/src/game_object.cpp.o -c /home/shirdi/spring22/cg/assign2/src/game_object.cpp
+
+CMakeFiles/app.dir/src/game_object.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/app.dir/src/game_object.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shirdi/spring22/cg/assign2/src/game_object.cpp > CMakeFiles/app.dir/src/game_object.cpp.i
+
+CMakeFiles/app.dir/src/game_object.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/game_object.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shirdi/spring22/cg/assign2/src/game_object.cpp -o CMakeFiles/app.dir/src/game_object.cpp.s
+
 CMakeFiles/app.dir/src/main.cpp.o: CMakeFiles/app.dir/flags.make
 CMakeFiles/app.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shirdi/spring22/cg/assign2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/app.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shirdi/spring22/cg/assign2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/app.dir/src/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/app.dir/src/main.cpp.o -c /home/shirdi/spring22/cg/assign2/src/main.cpp
 
 CMakeFiles/app.dir/src/main.cpp.i: cmake_force
@@ -85,7 +111,7 @@ CMakeFiles/app.dir/src/main.cpp.s: cmake_force
 
 CMakeFiles/app.dir/src/resource_manager.cpp.o: CMakeFiles/app.dir/flags.make
 CMakeFiles/app.dir/src/resource_manager.cpp.o: ../src/resource_manager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shirdi/spring22/cg/assign2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/app.dir/src/resource_manager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shirdi/spring22/cg/assign2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/app.dir/src/resource_manager.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/app.dir/src/resource_manager.cpp.o -c /home/shirdi/spring22/cg/assign2/src/resource_manager.cpp
 
 CMakeFiles/app.dir/src/resource_manager.cpp.i: cmake_force
@@ -98,7 +124,7 @@ CMakeFiles/app.dir/src/resource_manager.cpp.s: cmake_force
 
 CMakeFiles/app.dir/src/shader.cpp.o: CMakeFiles/app.dir/flags.make
 CMakeFiles/app.dir/src/shader.cpp.o: ../src/shader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shirdi/spring22/cg/assign2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/app.dir/src/shader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shirdi/spring22/cg/assign2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/app.dir/src/shader.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/app.dir/src/shader.cpp.o -c /home/shirdi/spring22/cg/assign2/src/shader.cpp
 
 CMakeFiles/app.dir/src/shader.cpp.i: cmake_force
@@ -111,7 +137,7 @@ CMakeFiles/app.dir/src/shader.cpp.s: cmake_force
 
 CMakeFiles/app.dir/src/sprite_renderer.cpp.o: CMakeFiles/app.dir/flags.make
 CMakeFiles/app.dir/src/sprite_renderer.cpp.o: ../src/sprite_renderer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shirdi/spring22/cg/assign2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/app.dir/src/sprite_renderer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shirdi/spring22/cg/assign2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/app.dir/src/sprite_renderer.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/app.dir/src/sprite_renderer.cpp.o -c /home/shirdi/spring22/cg/assign2/src/sprite_renderer.cpp
 
 CMakeFiles/app.dir/src/sprite_renderer.cpp.i: cmake_force
@@ -124,7 +150,7 @@ CMakeFiles/app.dir/src/sprite_renderer.cpp.s: cmake_force
 
 CMakeFiles/app.dir/src/texture.cpp.o: CMakeFiles/app.dir/flags.make
 CMakeFiles/app.dir/src/texture.cpp.o: ../src/texture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shirdi/spring22/cg/assign2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/app.dir/src/texture.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shirdi/spring22/cg/assign2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/app.dir/src/texture.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/app.dir/src/texture.cpp.o -c /home/shirdi/spring22/cg/assign2/src/texture.cpp
 
 CMakeFiles/app.dir/src/texture.cpp.i: cmake_force
@@ -138,6 +164,8 @@ CMakeFiles/app.dir/src/texture.cpp.s: cmake_force
 # Object files for target app
 app_OBJECTS = \
 "CMakeFiles/app.dir/src/game.cpp.o" \
+"CMakeFiles/app.dir/src/game_level.cpp.o" \
+"CMakeFiles/app.dir/src/game_object.cpp.o" \
 "CMakeFiles/app.dir/src/main.cpp.o" \
 "CMakeFiles/app.dir/src/resource_manager.cpp.o" \
 "CMakeFiles/app.dir/src/shader.cpp.o" \
@@ -148,6 +176,8 @@ app_OBJECTS = \
 app_EXTERNAL_OBJECTS =
 
 app: CMakeFiles/app.dir/src/game.cpp.o
+app: CMakeFiles/app.dir/src/game_level.cpp.o
+app: CMakeFiles/app.dir/src/game_object.cpp.o
 app: CMakeFiles/app.dir/src/main.cpp.o
 app: CMakeFiles/app.dir/src/resource_manager.cpp.o
 app: CMakeFiles/app.dir/src/shader.cpp.o
@@ -159,7 +189,7 @@ app: libglad.a
 app: /usr/lib/x86_64-linux-gnu/librt.so
 app: /usr/lib/x86_64-linux-gnu/libm.so
 app: CMakeFiles/app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shirdi/spring22/cg/assign2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shirdi/spring22/cg/assign2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable app"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/app.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
