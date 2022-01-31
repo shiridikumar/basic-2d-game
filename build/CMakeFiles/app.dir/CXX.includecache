@@ -878,16 +878,6 @@ detail/type_vec4.hpp
 detail/func_vector_relational.hpp
 ../libraries/glm/glm/detail/func_vector_relational.hpp
 
-/home/shirdi/spring22/cg/assign2/src/game.cpp
-game.h
-/home/shirdi/spring22/cg/assign2/src/game.h
-resource_manager.h
-/home/shirdi/spring22/cg/assign2/src/resource_manager.h
-sprite_renderer.h
-/home/shirdi/spring22/cg/assign2/src/sprite_renderer.h
-game_object.h
-/home/shirdi/spring22/cg/assign2/src/game_object.h
-
 /home/shirdi/spring22/cg/assign2/src/game.h
 glad/glad.h
 -
@@ -919,6 +909,18 @@ texture.h
 /home/shirdi/spring22/cg/assign2/src/texture.h
 sprite_renderer.h
 /home/shirdi/spring22/cg/assign2/src/sprite_renderer.h
+
+/home/shirdi/spring22/cg/assign2/src/main.cpp
+glad/glad.h
+-
+GLFW/glfw3.h
+-
+game.h
+/home/shirdi/spring22/cg/assign2/src/game.h
+resource_manager.h
+/home/shirdi/spring22/cg/assign2/src/resource_manager.h
+iostream
+-
 
 /home/shirdi/spring22/cg/assign2/src/resource_manager.h
 map

@@ -25,6 +25,8 @@ class Game
 {
 public:
     // game state
+    int level_no;
+    int num_enemies;
     GameState               State;	
     bool                    Keys[1024];
     unsigned int            Width, Height;
