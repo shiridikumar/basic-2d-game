@@ -10,8 +10,13 @@
 using namespace std;
 // Game-related State data
 SpriteRenderer *Renderer;
+time_t first;
+time_t second=0.0f;
 vector<GameObject *> obstacles;
 GameObject *Player;
+int player_level_score=0;
+int player_total_score=0;
+int coin_value=10;
 vector<EnemyObject *> enemies;
 map< pair<float,float>,int > reserved;
 vector<GameObject *> coins;
@@ -49,14 +54,14 @@ void Game::Init()
     Shader myshader = ResourceManager::GetShader("sprite");
     Renderer = new SpriteRenderer(myshader);
     // load textures
-    ResourceManager::LoadTexture("/home/shirdi/spring22/cg/assign2/src/bg.png", false, "background");
-    ResourceManager::LoadTexture("/home/shirdi/spring22/cg/assign2/src/enemy.png", true, "face");
-    ResourceManager::LoadTexture("/home/shirdi/spring22/cg/assign2/src/walls.jpg", false, "block");
-    ResourceManager::LoadTexture("/home/shirdi/spring22/cg/assign2/src/coin.png", true, "coins");
-    ResourceManager::LoadTexture("/home/shirdi/spring22/cg/assign2/src/player.png", true, "player");
+    ResourceManager::LoadTexture("../src/bg.png", false, "background");
+    ResourceManager::LoadTexture("../src/enemy.png", true, "face");
+    ResourceManager::LoadTexture("../src/walls.jpg", false, "block");
+    ResourceManager::LoadTexture("../src/coin.png", true, "coins");
+    ResourceManager::LoadTexture("../src/player.png", true, "player");
     // load levels
     GameLevel one;
-    one.Load("/home/shirdi/spring22/cg/assign2/src/one.lvl", this->Width, this->Height);
+    one.Load("../src/one.lvl", this->Width, this->Height);
     this->Levels.push_back(one);
     this->Level = 0;
     // configure game objects
@@ -71,7 +76,6 @@ void Game::Init()
         float randomx = (rand() % (int)(12)) +1;
 
         float randomy = (rand() % (int)(12)) +2;
-        cout << randomx << " " << randomy << endl;
         reserved[make_pair(randomx,randomy)]=1;
         obstacles.push_back(new GameObject(glm::vec2(randomx*(coin_size.x),randomy*coin_size.x), coin_size, ResourceManager::GetTexture("block")));   
     }
@@ -84,7 +88,6 @@ void Game::Init()
         float randomx = (rand() % 12);
 
         float randomy = (rand() % 13);
-        cout << randomx << " " << randomy << endl;
 
         glm::vec2 ballPos = glm::vec2(randomx*coin_size.x, randomy*coin_size.x);
         enemies.push_back(new EnemyObject(ballPos, BALL_RADIUS, INITIAL_BALL_VELOCITY,
@@ -96,12 +99,13 @@ void Game::Init()
         float randomx = (rand() % (int)(12)) + 1;
 
         float randomy = (rand() % (int)(13)) + 1;
-        cout << randomx << " " << randomy << endl;
         while(reserved[make_pair(randomx,randomy)]==1){
             randomx = (rand() % (int)(12)) + 1;
             randomy = (rand() % (int)(13)) + 1;
-            cout<<randomx<<" "<<randomy<<endl;
+
+
         }
+         cout << randomx << " " << randomy << endl;
         glm::vec2 coinPos = glm::vec2(randomx*coin_size.x, randomy*coin_size.x);
         coins.push_back(new GameObject(coinPos, coin_size, ResourceManager::GetTexture("coins")));
     }
@@ -115,11 +119,17 @@ void Game::Update(float dt)
     {
         enemies[i]->Move(dt, this->Width, this->Height);
     }
-    for(int i=0;i<this->num_enemies;i++){
-        if(abs(enemies[i]->Position.y-Player->Position.y)<50.0f && abs(enemies[i]->Position.x-Player->Position.x)<50.0f){
-            
+    for(int i=0;i<coins.size();i++){
+        if(abs(coins[i]->Position.y-Player->Position.y)<20.0f && abs(coins[i]->Position.x-Player->Position.x)<20.0f && time(NULL)-first/60>2){
+            first=time(NULL);
+            coins[i]->Position.x=-800;coins[i]->Position.y=-1000;
+            coins.erase(coins.begin()+i);
+            this->num_coins--;
+            player_level_score+=coin_value;
+            break;
         }
     }
+    //cout<<coins.size()<<endl;
 }
 
 void Game::ProcessInput(float dt)
