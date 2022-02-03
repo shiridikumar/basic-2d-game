@@ -3,6 +3,7 @@
 
 CMakeFiles/app.dir/src/enemy_object.cpp.o: ../libraries/glad/include/KHR/khrplatform.h
 CMakeFiles/app.dir/src/enemy_object.cpp.o: ../libraries/glad/include/glad/glad.h
+CMakeFiles/app.dir/src/enemy_object.cpp.o: ../libraries/glfw/include/GLFW/glfw3.h
 CMakeFiles/app.dir/src/enemy_object.cpp.o: ../libraries/glm/glm/common.hpp
 CMakeFiles/app.dir/src/enemy_object.cpp.o: ../libraries/glm/glm/detail/_fixes.hpp
 CMakeFiles/app.dir/src/enemy_object.cpp.o: ../libraries/glm/glm/detail/_swizzle.hpp
@@ -106,7 +107,10 @@ CMakeFiles/app.dir/src/enemy_object.cpp.o: ../libraries/glm/glm/vec4.hpp
 CMakeFiles/app.dir/src/enemy_object.cpp.o: ../libraries/glm/glm/vector_relational.hpp
 CMakeFiles/app.dir/src/enemy_object.cpp.o: ../src/enemy_object.cpp
 CMakeFiles/app.dir/src/enemy_object.cpp.o: ../src/enemy_object.h
+CMakeFiles/app.dir/src/enemy_object.cpp.o: ../src/game.h
+CMakeFiles/app.dir/src/enemy_object.cpp.o: ../src/game_level.h
 CMakeFiles/app.dir/src/enemy_object.cpp.o: ../src/game_object.h
+CMakeFiles/app.dir/src/enemy_object.cpp.o: ../src/resource_manager.h
 CMakeFiles/app.dir/src/enemy_object.cpp.o: ../src/shader.h
 CMakeFiles/app.dir/src/enemy_object.cpp.o: ../src/sprite_renderer.h
 CMakeFiles/app.dir/src/enemy_object.cpp.o: ../src/texture.h

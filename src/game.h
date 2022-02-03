@@ -5,6 +5,7 @@
 #include <GLFW/glfw3.h>
 
 #include "game_level.h"
+#include<bits/stdc++.h>
 
 // Represents the current state of the game
 enum GameState {
@@ -14,7 +15,7 @@ enum GameState {
 };
 
 // Initial size of the player paddle
-const glm::vec2 PLAYER_SIZE(50.0f, 70.0f);
+const glm::vec2 PLAYER_SIZE(50.0f, 50.0f);
 // Initial velocity of the player paddle
 const float PLAYER_VELOCITY(500.0f);
 const glm::vec2 coin_size(50.0f,50.0f);

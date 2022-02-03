@@ -1,5 +1,8 @@
 #include "enemy_object.h"
-
+#include "game.h"
+#include<bits/stdc++.h>
+using namespace std;
+extern map< pair<float,float>,int > reserved;
 
 EnemyObject::EnemyObject() 
     : GameObject(), Radius(12.5f), Stuck(true) { }
@@ -14,6 +17,7 @@ glm::vec2 EnemyObject::Move(float dt, unsigned int window_width,unsigned int win
     
         // move the ball
         this->Position += this->Velocity * dt;
+        
         // then check if outside window bounds and if so, reverse velocity and restore at correct position
         if (this->Position.x <= window_width/14)
         {

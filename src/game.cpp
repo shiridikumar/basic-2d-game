@@ -11,9 +11,9 @@ using namespace std;
 // Game-related State data
 SpriteRenderer *Renderer;
 vector<GameObject *> obstacles;
-map< pair<float,float>,int > reserved;
 GameObject *Player;
 vector<EnemyObject *> enemies;
+map< pair<float,float>,int > reserved;
 vector<GameObject *> coins;
 const glm::vec2 INITIAL_BALL_VELOCITY(0.0f, 350.0f);
 // Radius of the ball object
@@ -64,16 +64,16 @@ void Game::Init()
     float randomx = 0;
     float randomy = 0;
     this->num_walls=5;
+    reserved[make_pair(6,0)]=1;
+    reserved[make_pair(7,0)]=1;
     for(int i=0;i<this->num_walls;i++){
         srand(time(NULL) + i);
-        float randomx = (rand() % (int)(this->Width - (2*this->Width / 14)-2*coin_size.x)) + this->Width / 14+coin_size.x;
+        float randomx = (rand() % (int)(12)) +1;
 
-        float randomy = (rand() % (int)( this->Height - (2*this->Height / 15)-3*coin_size.y)) + this->Height / 15+coin_size.y;
+        float randomy = (rand() % (int)(12)) +2;
         cout << randomx << " " << randomy << endl;
         reserved[make_pair(randomx,randomy)]=1;
-        obstacles.push_back(new GameObject(glm::vec2(randomx,randomy), coin_size, ResourceManager::GetTexture("block")));
-
-        
+        obstacles.push_back(new GameObject(glm::vec2(randomx*(coin_size.x),randomy*coin_size.x), coin_size, ResourceManager::GetTexture("block")));   
     }
 
     for (int i = 0; i < this->num_enemies; i++)
@@ -81,30 +81,28 @@ void Game::Init()
         srand(time(NULL) + i);
 
         // Get a random number
-        float randomx = (rand() % this->Width);
+        float randomx = (rand() % 12);
 
-        float randomy = (rand() % this->Height);
+        float randomy = (rand() % 13);
         cout << randomx << " " << randomy << endl;
 
-        glm::vec2 ballPos = glm::vec2(randomx, randomy);
+        glm::vec2 ballPos = glm::vec2(randomx*coin_size.x, randomy*coin_size.x);
         enemies.push_back(new EnemyObject(ballPos, BALL_RADIUS, INITIAL_BALL_VELOCITY,
                                           ResourceManager::GetTexture("face")));
     }
     for (int i = 0; i < this->num_coins; i++)
     {
         srand(time(NULL) + i);
-        float randomx = (rand() % (int)(this->Width - (2*this->Width / 14)-2*coin_size.x)) + this->Width / 14+coin_size.x;
+        float randomx = (rand() % (int)(12)) + 1;
 
-        float randomy = (rand() % (int)( this->Height - (2*this->Height / 15)-2*coin_size.y)) + this->Height / 15+coin_size.y;
+        float randomy = (rand() % (int)(13)) + 1;
         cout << randomx << " " << randomy << endl;
         while(reserved[make_pair(randomx,randomy)]==1){
-            float randomx = (rand() % (int)(this->Width - (2*this->Width / 14)-2*coin_size.x)) + this->Width / 14+coin_size.x;
-
-            float randomy = (rand() % (int)( this->Height - (2*this->Height / 15)-2*coin_size.y)) + this->Height / 15+coin_size.y;
-
-        
+            randomx = (rand() % (int)(12)) + 1;
+            randomy = (rand() % (int)(13)) + 1;
+            cout<<randomx<<" "<<randomy<<endl;
         }
-        glm::vec2 coinPos = glm::vec2(randomx, randomy);
+        glm::vec2 coinPos = glm::vec2(randomx*coin_size.x, randomy*coin_size.x);
         coins.push_back(new GameObject(coinPos, coin_size, ResourceManager::GetTexture("coins")));
     }
 
@@ -117,6 +115,11 @@ void Game::Update(float dt)
     {
         enemies[i]->Move(dt, this->Width, this->Height);
     }
+    for(int i=0;i<this->num_enemies;i++){
+        if(abs(enemies[i]->Position.y-Player->Position.y)<50.0f && abs(enemies[i]->Position.x-Player->Position.x)<50.0f){
+            
+        }
+    }
 }
 
 void Game::ProcessInput(float dt)
@@ -124,30 +127,72 @@ void Game::ProcessInput(float dt)
     if (this->State == GAME_ACTIVE)
     {
         float velocity = PLAYER_VELOCITY * dt;
-        // move playerboard
-        // if (this->Keys[GLFW_KEY_A])
-        // {
-        //     if (Player->Position.x >= 0.0f)
-        //     {
-        //         Player->Position.x -= velocity;
-        //         if (Ball->Stuck)
-        //             Ball->Position.x -= velocity;
-        //     }
-        // }
-        // if (this->Keys[GLFW_KEY_D])
-        // {
-        //     if (Player->Position.x <= this->Width - Player->Size.x)
-        //     {
-        //         Player->Position.x += velocity;
-        //         if (Ball->Stuck)
-        //             Ball->Position.x += velocity;
-        //     }
-        // }
-        if (this->Keys[GLFW_KEY_SPACE])
-            for (int i = 0; i < this->num_enemies; i++)
+        
+        if (this->Keys[GLFW_KEY_A])
+        {
+            int flag=1;
+            if (Player->Position.x >= 0.0f+50.0f)
             {
-                enemies[i]->Stuck = false;
+                for(int i=0;i<this->num_walls;i++){
+                    if((Player->Position.x-obstacles[i]->Position.x)<50.0f && Player->Position.x-obstacles[i]->Position.x>0  && (abs(Player->Position.y-obstacles[i]->Position.y)<45.0f)){
+                        flag=0;
+                        break;
+                    }
+                }
+                if(flag==1){
+                    Player->Position.x -= velocity;
+                }
             }
+        }
+        if (this->Keys[GLFW_KEY_D])
+        {
+            int flag=1;
+            if (Player->Position.x <= this->Width - Player->Size.x-50.0f)
+            {
+                 for(int i=0;i<this->num_walls;i++){
+                    if((obstacles[i]->Position.x-Player->Position.x)<50.0f && obstacles[i]->Position.x-Player->Position.x>0  && (abs(Player->Position.y-obstacles[i]->Position.y)<45.0f)){
+                        flag=0;
+                        break;
+                    }
+                }
+                if(flag==1){
+                    Player->Position.x += velocity;
+                }
+            }
+        }
+        if (this->Keys[GLFW_KEY_W]){
+            int flag=1;
+            if(Player->Position.y > 50.0f)
+            {
+                for(int i=0;i<this->num_walls;i++){
+                    if((abs(obstacles[i]->Position.x-Player->Position.x)<45.0f) && ((Player->Position.y-obstacles[i]->Position.y)<50.0f) && Player->Position.y-obstacles[i]->Position.y>0.0f){
+                        flag=0;
+                        break;
+                    }
+                }
+                if(flag==1){
+                    //cout<<(int)(Player->Position.x/50.0f)<<" "<<(int)(Player->Position.y/50.0f)<<endl;
+                    Player->Position.y-=velocity;
+                }
+            }
+        }
+        if (this->Keys[GLFW_KEY_S]){
+            int flag=1;
+            if(Player->Position.y < this->Height-2*50.0f)
+            {
+                for(int i=0;i<this->num_walls;i++){
+                    if((abs(obstacles[i]->Position.x-Player->Position.x)<45.0f) && ((obstacles[i]->Position.y-Player->Position.y)<50.0f) && (obstacles[i]->Position.y-Player->Position.y>0.0f)){
+                        flag=0;
+                        break;
+                    }
+                }
+                if(flag==1){
+                    Player->Position.y+=velocity;
+                }
+            }
+
+        }
+
     }
 }
 

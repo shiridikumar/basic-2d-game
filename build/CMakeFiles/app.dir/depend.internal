@@ -4,6 +4,7 @@
 CMakeFiles/app.dir/src/enemy_object.cpp.o
  ../libraries/glad/include/KHR/khrplatform.h
  ../libraries/glad/include/glad/glad.h
+ ../libraries/glfw/include/GLFW/glfw3.h
  ../libraries/glm/glm/common.hpp
  ../libraries/glm/glm/detail/_fixes.hpp
  ../libraries/glm/glm/detail/_swizzle.hpp
@@ -107,7 +108,10 @@ CMakeFiles/app.dir/src/enemy_object.cpp.o
  ../libraries/glm/glm/vector_relational.hpp
  /home/shirdi/spring22/cg/assign2/src/enemy_object.cpp
  /home/shirdi/spring22/cg/assign2/src/enemy_object.h
+ /home/shirdi/spring22/cg/assign2/src/game.h
+ /home/shirdi/spring22/cg/assign2/src/game_level.h
  /home/shirdi/spring22/cg/assign2/src/game_object.h
+ /home/shirdi/spring22/cg/assign2/src/resource_manager.h
  /home/shirdi/spring22/cg/assign2/src/shader.h
  /home/shirdi/spring22/cg/assign2/src/sprite_renderer.h
  /home/shirdi/spring22/cg/assign2/src/texture.h
